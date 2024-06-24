@@ -1,4 +1,4 @@
-module github.com/clive-alliance/darksuitAI
+module github.com/clive-alliance/darksuitai
 
 go 1.20
 

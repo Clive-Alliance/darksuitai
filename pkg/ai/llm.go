@@ -3,7 +3,7 @@ package ai
 import (
 	"github.com/Stosan/groqgo"
 	ant "github.com/clive-alliance/anthropicgo"
-	"github.com/clive-alliance/darksuitAI/internal/utilities"
+	"github.com/clive-alliance/darksuitai/internal/utilities"
 	oai "github.com/clive-alliance/openaigo"
 )
 

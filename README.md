@@ -2,19 +2,19 @@
 
 ⚡ Blazing production-ready library for building scalable reasoning AI systems ✨
 
-[![Release Notes](https://img.shields.io/github/release/clive-alliance/darksuitAI?style=flat-square)](https://github.com/clive-alliance/darksuitAI/releases)
-[![CI](https://github.com/clive-alliance/darksuitAI/actions/workflows/check_diffs.yml/badge.svg)](https://github.com/clive-alliance/darksuitAI/actions/workflows/check_diffs.yml)
-[![GitHub star chart](https://img.shields.io/github/stars/clive-alliance/darksuitAI?style=flat-square)](https://star-history.com/#clive-alliance/darksuitAI)
-[![Open Issues](https://img.shields.io/github/issues-raw/clive-alliance/darksuitAI?style=flat-square)](https://github.com/clive-alliance/darksuitAI/issues)
-[![Open in Dev Containers](https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode&style=flat-square)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/clive-alliance/darksuitAI)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/clive-alliance/darksuitAI)
+[![Release Notes](https://img.shields.io/github/release/clive-alliance/darksuitai?style=flat-square)](https://github.com/clive-alliance/darksuitai/releases)
+[![CI](https://github.com/clive-alliance/darksuitai/actions/workflows/check_diffs.yml/badge.svg)](https://github.com/clive-alliance/darksuitai/actions/workflows/check_diffs.yml)
+[![GitHub star chart](https://img.shields.io/github/stars/clive-alliance/darksuitai?style=flat-square)](https://star-history.com/#clive-alliance/darksuitai)
+[![Open Issues](https://img.shields.io/github/issues-raw/clive-alliance/darksuitai?style=flat-square)](https://github.com/clive-alliance/darksuitai/issues)
+[![Open in Dev Containers](https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode&style=flat-square)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/clive-alliance/darksuitai)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/clive-alliance/darksuitai)
 
 
 
 ## Quick Install
 
 ```go
-go get guthub.com/clive-alliance/darksuitAI@latest
+go get guthub.com/clive-alliance/darksuitai@latest
 ```
 
 
@@ -57,7 +57,7 @@ This includes [prompt management](s), [prompt optimization](), a generic interfa
 
 import (
 	"fmt"
-	"github.com/clive-alliance/darksuitAI"
+	"github.com/clive-alliance/darksuitai"
 )
 
 func main() {
