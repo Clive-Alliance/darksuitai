@@ -11,5 +11,8 @@ require (
 
 require github.com/joho/godotenv v1.5.1 // indirect
 
+retract v0.0.3-0.20240624021813-f815341deaf3
+
 retract v0.0.2
+
 retract v0.0.1

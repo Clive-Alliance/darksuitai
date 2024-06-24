@@ -10,38 +10,47 @@ import (
 var llm LLM
 
 func (ai AI) Chat(prompt string) (string, error) {
+	kwargs := make([]map[string]interface{}, 5)
 	for key := range ai.ModelType {
 		switch key {
 		case "anthropic":
-			kwargs := []map[string]interface{}{{
-				"model":          ai.ModelType["anthropic"],
-				"max_tokens":     3000,
-				"temperature":    0.0,
-				"stream":         true,
-				"stop_sequences": []string{"\nObservation"},
-			}}
+			for k, v := range ai.ModelKwargs {
+				kwargs[k] = map[string]interface{}{
+					"model":          ai.ModelType["anthropic"],
+					"max_tokens":     v.MaxTokens,
+					"temperature":    v.Temperature,
+					"stream":         v.Stream,
+					"stop_sequences": v.StopSequences,
+				}
+
+			}
 
 			llm = ant.ChatAnth(kwargs...)
 		case "groq":
-			kwargs := []map[string]interface{}{{
-				"model":       ai.ModelType["groq"],
-				"temperature": 0.2,
-				"max_tokens":  3000,
-				"stream":      true,
-				"stop":        []string{"Observation"},
-			}}
+			for k, v := range ai.ModelKwargs {
+				kwargs[k] = map[string]interface{}{
+					"model":       ai.ModelType["groq"],
+					"max_tokens":  v.MaxTokens,
+					"temperature": v.Temperature,
+					"stream":      v.Stream,
+					"stop":        v.StopSequences,
+				}
+
+			}
 
 			llm = groqgo.ChatGroq(kwargs...)
 
 		case "openai":
-			kwargs := []map[string]interface{}{{
-				"model":       ai.ModelType["openai"],
-				"temperature": 0.2,
-				"max_tokens":  3000,
-				"stream":      true,
-				"stop":        []string{"Observation"},
-			}}
+			for k, v := range ai.ModelKwargs {
+				kwargs[k] = map[string]interface{}{
+					"model":          ai.ModelType["openai"],
+					"max_tokens":     v.MaxTokens,
+					"temperature":    v.Temperature,
+					"stream":         v.Stream,
+					"stop_sequences": v.StopSequences,
+				}
 
+			}
 			llm = oai.ChatOAI(kwargs...)
 		default:
 			llm = nil

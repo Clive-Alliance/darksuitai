@@ -69,10 +69,10 @@ func main() {
 
 	args := darksuitAI.NewChatLLMArgs()
 
-	args.SetChatInstruction([]byte(`Your chat instruction goes here`))
+	// args.SetChatInstruction([]byte(`Your chat instruction goes here`)) // uncomment to pass your own prompt instruction
 	args.AddPromptKey("year", []byte(`2024`)) // pass variables to your prompt
 	args.SetModelType("openai", "gpt-4o") // set the model
-	args.AddModelKwargs(1500, 0.8, true, []string{"\nObservation:"}) // set model keyword arguments
+	args.AddModelKwargs(500, 0.8, true, []string{"\nObservation:"}) // set model keyword arguments
 	llm,err := args.NewLLM()
 	if err != nil{
 		// handle the error as you wish

@@ -17,7 +17,7 @@ func NewChatLLMArgs() *ChatLLMArgs {
 		PromptKeys:      make(map[string][]byte),
 		ModelType:       make(map[string]string),
 		ModelKwargs: []struct {
-			MaxTokens     int64    `json:"max_tokens"`
+			MaxTokens     int    `json:"max_tokens"`
 			Temperature   float64  `json:"temperature"`
 			Stream        bool     `json:"stream"`
 			StopSequences []string `json:"stop_sequences"`
@@ -94,13 +94,13 @@ Example:
 
 args := darksuitAI.NewChatLLMArgs()
 
-args.AddModelKwargs(1500, 0.8, true, []string{"Human:"})
+args.AddModelKwargs(500, 0.8, true, []string{"Human:"})
 
 In this example, the model arguments are set with a maximum of 1500 tokens, a temperature of 0.8, streaming enabled, and a stop sequence of "Human:".
 */
-func (args *ChatLLMArgs) AddModelKwargs(maxTokens int64, temperature float64, stream bool, stopSequences []string) {
+func (args *ChatLLMArgs) AddModelKwargs(maxTokens int, temperature float64, stream bool, stopSequences []string) {
 	args.ModelKwargs = append(args.ModelKwargs, struct {
-		MaxTokens     int64    `json:"max_tokens"`
+		MaxTokens     int    `json:"max_tokens"`
 		Temperature   float64  `json:"temperature"`
 		Stream        bool     `json:"stream"`
 		StopSequences []string `json:"stop_sequences"`
