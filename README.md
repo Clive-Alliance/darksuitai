@@ -1,11 +1,11 @@
-# 🦜️🔗 DarkSuitAI
+# 🕵️ DarkSuitAI
 
 ⚡ Blazing production-ready library for building scalable reasoning AI systems ✨
 
 [![Release Notes](https://img.shields.io/github/release/clive-alliance/darksuitAI?style=flat-square)](https://github.com/clive-alliance/darksuitAI/releases)
-[![CI](https://github.com/langchain-ai/langchain/actions/workflows/check_diffs.yml/badge.svg)](https://github.com/langchain-ai/langchain/actions/workflows/check_diffs.yml)
+[![CI](https://github.com/clive-alliance/darksuitAI/actions/workflows/check_diffs.yml/badge.svg)](https://github.com/clive-alliance/darksuitAI/actions/workflows/check_diffs.yml)
 [![GitHub star chart](https://img.shields.io/github/stars/clive-alliance/darksuitAI?style=flat-square)](https://star-history.com/#clive-alliance/darksuitAI)
-[![Open Issues](https://img.shields.io/github/issues-raw/langchain-ai/langchain?style=flat-square)](https://github.com/clive-alliance/darksuitAI/issues)
+[![Open Issues](https://img.shields.io/github/issues-raw/clive-alliance/darksuitAI?style=flat-square)](https://github.com/clive-alliance/darksuitAI/issues)
 [![Open in Dev Containers](https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode&style=flat-square)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/clive-alliance/darksuitAI)
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/clive-alliance/darksuitAI)
 
@@ -13,7 +13,6 @@
 
 ## Quick Install
 
-With pip:
 ```go
 go get guthub.com/clive-alliance/darksuitAI@latest
 ```
@@ -40,7 +39,7 @@ And much more!
 
 ## 🚀 How does DarkSuitAI bring you straight to production?
 The main value props of the DarkSuitAI libraries are:
-1. **Components**: composable building blocks, tools and integrations for working with language models. Components are modular and easy-to-use, whether you are using the rest of the LangChain framework or not
+1. **Components**: composable building blocks, tools and integrations for working with language models. Components are modular and easy-to-use, and full scale production-ready for AI systems.
 2. **Off-the-shelf chains**: built-in assemblages of components for accomplishing higher-level tasks
 
 Off-the-shelf chains make it easy to get started. Components make it easy to customize existing chains and build new ones. 
@@ -62,6 +61,10 @@ import (
 )
 
 func main() {
+
+	os.Setenv("OPENAI_API_KEY", "YOUR_API_KEY")
+    os.Setenv("ANTHROPIC_API_KEY", "Your Key") // anthropic API key
+
 	args := darksuitAI.NewChatLLMArgs()
 
 	args.SetChatInstruction("Your chat instruction goes here")
