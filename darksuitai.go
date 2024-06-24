@@ -58,14 +58,14 @@ Example:
 
 args := darksuitAI.NewChatLLMArgs()
 
-args.AddPromptKey("year", "2024")
+args.AddPromptKey("year", []byte(`2024`))
 
-args.AddPromptKey("month", "June")
+args.AddPromptKey("month", []byte(`June`))
 
 In this example, the keys "year" and "month" with their respective values "2024" and "June" are added to the PromptKeys map, which can then be referenced in the chat instruction template.
 */
-func (args *ChatLLMArgs) AddPromptKey(key, value string) {
-	args.PromptKeys[key] = []byte(value)
+func (args *ChatLLMArgs) AddPromptKey(key string, value []byte) {
+	args.PromptKeys[key] = value
 }
 
 /*

@@ -65,14 +65,14 @@ import (
 func main() {
 
 	os.Setenv("OPENAI_API_KEY", "YOUR_API_KEY")
-    os.Setenv("ANTHROPIC_API_KEY", "Your Key") // anthropic API key
+    os.Setenv("ANTHROPIC_API_KEY", "YOUR_API_KEY") // anthropic API key
 
 	args := darksuitAI.NewChatLLMArgs()
 
-	args.SetChatInstruction("Your chat instruction goes here")
-	args.AddPromptKey("year", "2024") // pass variables to your prompt
+	args.SetChatInstruction([]byte(`Your chat instruction goes here`))
+	args.AddPromptKey("year", []byte(`2024`)) // pass variables to your prompt
 	args.SetModelType("openai", "gpt-4o") // set the model
-	args.AddModelKwargs(1500, 0.8, true, []string{"Human:"}) // set model keyword arguments
+	args.AddModelKwargs(1500, 0.8, true, []string{"\nObservation:"}) // set model keyword arguments
 	llm,err := args.NewLLM()
 	if err != nil{
 		// handle the error as you wish
