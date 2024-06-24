@@ -55,6 +55,8 @@ This includes [prompt management](s), [prompt optimization](), a generic interfa
 
 ```go
 
+package main
+
 import (
 	"fmt"
 	"github.com/clive-alliance/darksuitai"
